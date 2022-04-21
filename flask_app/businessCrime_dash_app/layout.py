@@ -74,7 +74,7 @@ layout = dbc.Container(children=[
                 )
             ]
                     ),
-            dbc.Col([
+            dbc.Col(width=5, children=[
                 dcc.Graph(
                     id='map-chart',
                     figure=fig_borough_map,
