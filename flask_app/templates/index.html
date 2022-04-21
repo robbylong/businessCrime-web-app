@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.fancybox.css') }}">
+<style>
+
+    .ipic{
+        float: left;
+        width: 24%;
+        text-align: center;
+    }
+        .fancybox img {
+        margin-bottom: 5px;
+        height: 150px;
+        width: 99%;
+    }
+      .ipic span{
+          color: black;
+          font-size: 14px;
+
+       }
+</style>
+{% endblock %}
+{% block content %}
+    <h1>{{ Introdution }}</h1>
+    <h2 style="text-align:center;">This is the home page for business crime dash app.</h2>
+
+    <p></p>
+    <p>London Crime is a flask, web-based application created to display recent crime statistics in London, aiming to help
+police officers conduct analysis and help citizens protect themselves. To provide a straightforward visual display of crime data,
+the web app showcases total crime cases in London from 2020 to 2021 in a dashboard sorted by crime types and borough levels.
+The data is provided by Metropolitan Police Service.</p>
+    <p>Sign up an account to view the dashboard!</p>
+
+        <div class="ibox-content">
+            {% for f in file_list%}
+                    <div class="ipic">
+                        <a class="fancybox" href="../static/images/boroughpic/{{f}}.jpeg" title="{{f}}">
+                            <img alt="image" src="../static/images/boroughpic/{{f}}.jpeg" />
+                        </a>
+                        <br/><span>{{f}}</span>
+                    </div>
+            {% endfor %}
+        </div>
+
+
+<script src="js/jquery.min.js?v=2.1.4"></script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.fancybox.js') }}"></script>
+<script>
+    $(document).ready(function () {
+        $('.fancybox').fancybox({
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+    });
+</script>
+
+{% endblock %}
+
