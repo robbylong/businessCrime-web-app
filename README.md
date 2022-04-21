@@ -25,7 +25,7 @@ run it and click the 'http://127.0.0.1:5000/'.
 
 ### Sign up and login (to access business crime dashboard)
 - User can sign up an account with an email, and log in to view the crime dashboard
-  <img alt="img_8.png" src="images for README/img_8.png"/><img alt="img_9.png" src="images for README/img_9.png"/><img alt="img_10.png" src="images for README/img_10.png"/>
+  <img alt="img_8.png" src="images for README/img_8.png"/><img alt="img_9.png" src="images for README/img_9.png"/>![img_1.png](img_1.png)
 
 Then click the 'Dashboard' in the navigation bar:
 <img alt="img_11.png" src="images for README/img_11.png"/>
